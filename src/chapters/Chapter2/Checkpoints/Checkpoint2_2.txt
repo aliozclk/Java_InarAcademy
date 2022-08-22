@@ -1,0 +1,12 @@
+2.2 How do you write a statement to let the user enter a double value from the keyboard?
+
+What happens if you entered 5a when executing the following code?
+double radius = input.nextDouble();
+
+Answer :
+
+Scanner input = new Scanner (System.in);
+double value = input.nextDouble();
+
+if you entered 5a when executing this code, it will give a runtime error.
+Because "double"type cannot hold "char" or "String" type.

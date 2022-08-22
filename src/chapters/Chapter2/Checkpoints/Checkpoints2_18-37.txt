@@ -1,0 +1,205 @@
+2.18
+
+How many accurate digits are stored in a float or double type variable?
+.................
+
+A float value has 7-8 number of accurate digits 
+and a double value has 15-17 number of accurate digits.
+
+_____________________________________
+
+2.19
+
+Which of the following are correct literals for floating-point numbers?
+12.3, 12.3e+2, 23.4e-2, –334.4, 20.5, 39F, 40D
+
+.................
+
+All of them are correct.
+
+______________________________________
+
+2.20
+Which of the following are the same as 52.534?
+5.2534e+1, 0.52534e+2, 525.34e-1, 5.2534e+0
+.................
+
+52.534 =  0.52534e+2 =  525.34e-1 = 5.2534e+1
+_____________________________________________
+
+2.21
+Which of the following are correct literals?
+5_2534e+1, _2534, 5_2, 5_
+................
+
+5_2534e+1, and 5_2, are correct.
+
+_______________________________________________
+
+2.22
+How would you write the following arithmetic expression in Java?
+a. 
+b.
+......................
+
+a..  4.0 / (3 * (r + 34)) - 9.0 * (a + b * c) + (3 + d * (2 + a) )/ (a + b * d)
+
+b..  5.5 * Math.pow(r + 2.5, 2.5 + t)
+
+__________________________________________________
+
+2.23
+How do you obtain the current second, minute, and hour?
+..........................
+
+long totalMills = System.currentTimeMillis() returns the milliseconds since Jan 1, 1970.
+long totalSeconds = totalMills / 1000 returns the total seconds.
+long totalMinutes = totalSeconds / 60 returns the total minutes.
+totalSeconds % 60 returns the current second.
+totalMinutes % 60 returns the current minute.
+totalMinutes / 60 % 24 returns the current hour.
+
+______________________________________________________
+
+2.24
+
+Show the output of the following code:
+double a = 6.5;
+a += a + 1;
+.....................
+
+result : 14.0
+
+____________________________________________________
+
+2.25
+
+Which of these statements are true?
+a. Any expression can be used as a statement.
+b. The expression x++ can be used as a statement.
+c. The statement x = x + 5 is also an expression.
+d. The statement x = y = x = 0 is illegal.
+.....................
+
+a.false
+b.true
+c.true
+d.false
+_______________________________________________________
+
+2.26
+Show the output of the following code:
+int a = 6;
+int b = a++;
+System.out.println(a);
+System.out.println(b);
+a = 6;
+b = ++a;
+System.out.println(a);
+System.out.println(b);
+..............
+
+7
+6
+7
+7
+______________________________________________________
+
+2.27
+Can different types of numeric values be used together in a computation?
+.....
+yes, can be used via casting.
+
+_________________________________________________
+
+2.28
+What does an explicit casting from a double to an int do with the fractional part of
+the double value? Does casting change the variable being cast?
+...................
+(int) double value
+
+The fractional part is truncated. 
+_______________________________________________________
+
+2.29
+
+Show the following output:
+float f = 12.5F;
+int i = (int)f;
+System.out.println("f is " + f);
+System.out.println("i is " + i);
+.......................
+
+f is 12.5
+i is 12,
+_____________________________________________________
+2.30
+
+If you change (int)(tax * 100) / 100.0 to (int)(tax * 100) / 100 in line
+11 in Listing 2.8, what will be the output for the input purchase amount of 197.55?
+
+......
+before the change 11.85
+after : 11
+________________________________________________________
+
+2.31
+Show the output of the following code:
+
+double amount = 5;
+System.out.println(amount / 2);
+System.out.println(5 / 2);
+.............................
+
+2.5
+2
+__________________________________________________________
+
+2.32 How would you write the following arithmetic expression?
+
+-b + 2b2 - 4ac
+2a
+.......................
+
+(b + Math.pow(b * b - 4 * a * c, 0.5)) / (2 * a)
+
+_____________________________________________________
+
+2.33
+2.33 Show the output with the input value 1.99
+....................
+Enter an amount in double, for example 11.56: 1.99
+Your amount 1.99 consists of
+    1 dollars
+    3 quarters 
+    2 dimes
+    0 nickels
+    4 pennies
+__________________________________________________________________
+
+2.34 Can you declare a variable as int and later redeclare it as double.
+
+No, we can't.
+__________________________________________________________________________
+
+
+2.35 What is an integer overflow? Can floating-point operations cause overflow?
+.........................
+
+Numbers are stored with a limited numbers of digits. When a variable is assigned a value that is too large (in size) to be stored, 
+it causes overflow. Overflow is for integer operations. Floating-point operations will not cause overflow.
+
+__________________________________________________________________________
+
+ 2.36 Will overflow cause a runtime error?
+
+No. It is a logic error.
+
+____________________________________________________________________________
+
+2.37 What is a round-off error? Can integer operations cause round-off errors? Can
+floating-point operations cause round-off errors?
+.......
+
+A round-off error, also called a rounding error, is the difference between the calculated approximation of a number and its exact mathematical value.
+ Integer operations will not cause rounding error. Floating-point operations may cause rounding error.

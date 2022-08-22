@@ -1,0 +1,9 @@
+2.3 Are there any performance differences between the following two import statements?
+
+import java.util.Scanner;
+import java.util.*;
+
+First statement imports Scanner class.
+Second one imports whole Java Library.
+So pratically there is no diffeerence but they are not same.
+  

@@ -1,0 +1,15 @@
+2.8.1
+What are the naming conventions for class names, method names, constants, and
+variables? Which of the following items can be a constant, a method, a variable, or a
+class according to the Java naming conventions?
+
+MAX_VALUE, Test, read, readDouble
+
+Class names : must begin with uppercase in each word.
+Variables and methods : must begin with lowercase in first word , other words begins with 
+upper cases.
+Constants : UPPERCASE
+
+Constants : MAX_VALUE
+Method, variable : read , readDouble
+Class : Test
