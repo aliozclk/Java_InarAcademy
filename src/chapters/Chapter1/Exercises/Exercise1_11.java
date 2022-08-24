@@ -1,6 +1,6 @@
-package chapters.Chapter1;
+package chapters.Chapter1.Exercises;
 
-public class Exercises1_11 {
+public class Exercise1_11 {
 	public static void main(String[] args) {
 
 	double currentPopulation = 312032486 ;

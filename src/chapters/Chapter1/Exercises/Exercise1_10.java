@@ -1,6 +1,6 @@
-package chapters.Chapter1;
+package chapters.Chapter1.Exercises;
 
-public class Exercises1_10 {
+public class Exercise1_10 {
 	public static void main(String[] args) {
 		double distanceKm = 14 ;
 		double distanceMile = distanceKm/1.6 ;

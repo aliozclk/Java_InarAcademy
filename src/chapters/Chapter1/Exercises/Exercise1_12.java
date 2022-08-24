@@ -1,6 +1,6 @@
-package chapters.Chapter1;
+package chapters.Chapter1.Exercises;
 
-public class Exercises1_12 {
+public class Exercise1_12 {
 	public static void main (String[] args) {
 	
 		double secondToHour = (60*60 + 40*60 + 35 )/ 3600 ;

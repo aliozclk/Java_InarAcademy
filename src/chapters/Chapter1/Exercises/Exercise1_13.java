@@ -1,6 +1,6 @@
-package chapters.Chapter1;
+package chapters.Chapter1.Exercises;
 
-public class Exercises1_13 {
+public class Exercise1_13 {
 	public static void main (String[] args) {
 		
 		double a = 3.4 ;
