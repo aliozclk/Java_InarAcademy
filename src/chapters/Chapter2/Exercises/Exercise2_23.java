@@ -8,7 +8,15 @@ public class Exercise2_23 {
 		
 		System.out.println("Enter the driving distance: ");
 		double distance = input.nextDouble();
-		System.out.println("");
+		System.out.println("Enter miles per gallon: ");
+		double milesPerGallon = input.nextDouble();
+		System.out.println("Enter price per gallon: ");
+		double pricePerGallon = input.nextDouble();
+		
+		double cost = distance / milesPerGallon * pricePerGallon ;
+		
+		System.out.println("The cost of driving is " + cost);
 	
-}
+		input.close();
+	}
 }
