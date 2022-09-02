@@ -54,13 +54,13 @@ public class Exercise03_24 {
 				rankCard ="10 ";
 				break ;
 			case 11 :
-				rankCard ="11 ";
+				rankCard ="Jack ";
 				break ;
 			case 12 :
-				rankCard ="12 ";
+				rankCard ="Queen";
 				break ;
 			case 13 :
-				rankCard ="13 ";
+				rankCard ="King";
 				break ;	
 		}
 		

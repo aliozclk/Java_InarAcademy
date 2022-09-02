@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Exercise03_15 {
 	public static void main(String[] args) {
 	    // Generate a lottery
-	    int lottery = (int)(Math.random() * 1000 + 100 );
+	    int lottery = (int)(Math.random() * 900 + 100 );
 
 	    // Prompt the user to enter a guess
 	    Scanner input = new Scanner(System.in);

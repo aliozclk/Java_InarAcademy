@@ -12,10 +12,10 @@ public class Exercise03_28 {
 		double width = input.nextDouble();
 		double height = input.nextDouble();
 		
-		double rectanglex1 = x1 + width / 2 ;
-		double rectanglex1Negative = x1 - width / 2 ;
-		double rectangley1 = y1 + height / 2 ;
-		double rectangley1Negative = y1 - height / 2 ;
+		double rectangleRight = x1 + width / 2 ;
+		double rectangleLeft = x1 - width / 2 ;
+		double rectangleTop = y1 + height / 2 ;
+		double rectangleBottom = y1 - height / 2 ;
 		
 		System.out.println("Enter r2's center x-, y-coordinates, width, and height: ");
 		double x2 = input.nextDouble();
@@ -23,22 +23,24 @@ public class Exercise03_28 {
 		double width2 = input.nextDouble();
 		double height2 = input.nextDouble();
 		
-		double rectanglex2 = x2 + width2 / 2 ;
-		double rectanglex2Negative = x2 - width2 / 2 ;
-		double rectangley2 = y2 + height2 / 2 ;
-		double rectangley2Negative = y2 - height2 / 2 ;
+		double rectangleRight2 = x2 + width2 / 2 ;
+		double rectangleLeft2 = x2 - width2 / 2 ;
+		double rectangleTop2 = y2 + height2 / 2 ;
+		double rectangleBottom2 = y2 - height2 / 2 ;
 		
-		boolean isInside = rectanglex1 >= rectanglex2 && rectanglex1Negative <= rectanglex2Negative && 
-				rectangley1 >= rectangley2 && rectangley1Negative <= rectangley2Negative ;
+		boolean isInside = rectangleRight >= rectangleRight2 && rectangleLeft <= rectangleLeft2 && 
+				rectangleTop >= rectangleTop2 && rectangleBottom <= rectangleBottom2 ;
 		
-		boolean isOverlap = rectanglex1 < rectanglex2Negative || rectanglex1Negative > rectanglex2 || 
-						rectangley1 < rectangley2Negative || rectangley1Negative > rectangley2 ;		
+		boolean isOutside = rectangleRight < rectangleLeft2 || rectangleLeft > rectangleRight2 || 
+				rectangleTop < rectangleBottom2 || rectangleBottom > rectangleTop2 ;
+		
+				
 		if(isInside)
 			System.out.println("r2 is inside r1");
-		else if(isOverlap)
-			System.out.println("r2 overlaps r1");
-		else 
+		else if(isOutside)
 			System.out.println("r2 does not overlap r1");
+		else 
+			System.out.println("r2 overlaps r1");
 		
 		
 	}
