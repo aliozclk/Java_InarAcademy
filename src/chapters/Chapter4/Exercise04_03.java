@@ -5,23 +5,23 @@ public class Exercise04_03 {
 		
 		double latitudeAtalanta = 33.748783;
 		double longitudeAtalanta = -84.388168 ;
-		double x1 = Math.toRadians(latitudeAtalanta);
-		double y1 = Math.toRadians(longitudeAtalanta);
+		double y1 = Math.toRadians(latitudeAtalanta);
+		double x1 = Math.toRadians(longitudeAtalanta);
 		
 		double orlandoLatitude = 28.538336 ;
 		double orlandoLongitude = -81.379234 ;
-		double x2 = Math.toRadians(orlandoLatitude);
 		double y2 = Math.toRadians(orlandoLatitude);
+		double x2 = Math.toRadians(orlandoLongitude);
 		
 		double savannahLatitude = 32.083541 ;
 		double savannahLongitude = -81.099834 ;
-		double x3 = Math.toRadians(savannahLatitude);
-		double y3 = Math.toRadians(savannahLongitude);
+		double y3 = Math.toRadians(savannahLatitude);
+		double x3 = Math.toRadians(savannahLongitude);
 		
 		double charlotteLatitude = 35.213890 ;
 		double charlotteLongitude = -80.943054 ;
-		double x4 = Math.toRadians(charlotteLatitude);
-		double y4 = Math.toRadians(charlotteLongitude);
+		double y4 = Math.toRadians(charlotteLatitude);
+		double x4 = Math.toRadians(charlotteLongitude);
 		
 		double radius = 6371.01;
 		double side1 = radius * Math.acos(Math.sin(x1) * Math.sin(x2) + Math.cos(x1) *  
@@ -36,10 +36,10 @@ public class Exercise04_03 {
 				Math.cos(x1) * Math.cos(y3 - y1 )	);
 		
 		
-		double s = (side1 + side2 + side5)/ 2 ;
-		double area1 = Math.pow((s*(s-side1)* (s- side2)* (s- side5)), 0.5);
-		s = (side5 + side3 + side4)/ 2 ;
-		double area2 = Math.pow((s*(s-side5)* (s- side3)* (s- side4)), 0.5);
+		double s = (side1 + side2 + side5) ;
+		double area1 = Math.sqrt((s*(s-side1)* (s- side2)* (s- side5)));
+		s = (side5 + side3 + side4) ;
+		double area2 = Math.sqrt((s*(s-side5)* (s- side3)* (s- side4)));
 		
 		System.out.println("The area enclosed by four cities is  " + area1 + area2);
 		
