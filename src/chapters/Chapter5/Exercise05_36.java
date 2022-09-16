@@ -15,8 +15,7 @@ public class Exercise05_36 {
 
         for (int step = isFirstZero ?  2  : 1 ; step <= 9 ; step++ ){
 
-            int stepNumber =  ((isbnNum  / (int)Math.pow(10 , 9 - step )) % 10 ) ;
-            checkSum += stepNumber * step ;
+            checkSum +=  ((isbnNum  / (int)Math.pow(10 , 9 - step )) % 10 ) * step ;
         }
 
         checkSum %= 11 ;
