@@ -41,7 +41,7 @@ public class Exercise03_21 {
 			break;
 		case 4:
 			day = "Wednesday" ;			
-			brek;
+			break;
 		case 5:
 			day = "Thursday" 		;	
 			break;
@@ -49,7 +49,7 @@ public class Exercise03_21 {
 			day = "Friday" 	;		
 			break;
 			
-		a
+
 		}
 		System.out.println("Day of the week is " + day );
 	}

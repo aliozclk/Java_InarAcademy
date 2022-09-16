@@ -6,11 +6,11 @@ public class Exercise05_26 {
 		
 		for (double i = 1 ; i <= 10_000 ; i++ ) {
 			
-			double factoriel = 0 ;
+			double factoriel = 1 ;
 			
 			for( double j = i ; j > 0 ; j-- ) {
 				
-				factoriel +=  j ;
+				factoriel *=  j ;
 				
 			}
 			

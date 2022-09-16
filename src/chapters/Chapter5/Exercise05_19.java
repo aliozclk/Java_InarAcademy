@@ -5,15 +5,15 @@ import java.util.Iterator;
 public class Exercise05_19 {
 	public static void main(String[] args) {
 		
-		for(int i = 1 ; i <= 8 ; i++) {
-			for(int j = 1 ; j <= 16-2*i ; j++ ) {
+		for(int lines = 1 ; lines <= 8 ; lines++) {
+			for(int j = 1 ; j <= 16-2*lines ; j++ ) {
 				System.out.print("   ");
 			}
-			for(int k = 0 ; k < i ; k++ ) {
-				System.out.printf("%3d%s",(int)(Math.pow(2, k)),"   ");
+			for(int k = 0 ; k < lines ; k++ ) {
+				System.out.printf("%4d%s",(int)(Math.pow(2, k)),"  ");
 			}
-			for(int t = i-2; t >= 0 ; t -- ) {
-					System.out.printf("%3d%s",(int)Math.pow(2, t),"   ");
+			for(int t = lines-2; t >= 0 ; t -- ) {
+					System.out.printf("%4d%s",(int)Math.pow(2, t),"  ");
 				
 			}
 			System.out.println();

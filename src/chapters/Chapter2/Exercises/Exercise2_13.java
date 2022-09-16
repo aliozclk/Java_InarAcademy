@@ -7,6 +7,7 @@ public class Exercise2_13 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the monthly saving amount:");
 		double salary = input.nextDouble();
+
 		double montlyInterestRate = 0.05 / 12 ;
 		double saving = 0 ;
 		
