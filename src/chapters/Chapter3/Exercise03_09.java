@@ -21,7 +21,9 @@ public class Exercise03_09 {
 		
 		
 		int checkSum = (d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 +
-				d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11 ;
+				d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9)  ;
+
+		checkSum %= 11 ;
 		
 		System.out.println(d1+ ""+ d2 +""+ d3 +""+ d4 +""+ d5 +""+ d6 +""+ d7 +""+
 				d8 +""+ d9 +""+ (checkSum == 10 ? "X" : "" + checkSum  ));
