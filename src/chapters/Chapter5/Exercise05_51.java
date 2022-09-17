@@ -26,5 +26,6 @@ public class Exercise05_51 {
         }else {
             System.out.println("The common prefix is " + common);
         }
+
     }
 }
