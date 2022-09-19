@@ -49,7 +49,7 @@ public class Exercise05_34 {
                 System.out.println("The computer is scissor. You are paper. You lose.");
                 pcWon++;
             }
-            System.out.println("Score" + userWon +" " + pcWon);
+            System.out.println("Score" + userWon +" - " + pcWon);
         }while (Math.abs(userWon-pcWon) < 2  );
 
         if (userWon > pcWon ){

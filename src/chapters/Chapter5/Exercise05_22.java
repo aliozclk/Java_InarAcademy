@@ -19,16 +19,19 @@ public class Exercise05_22 {
 				 - 1 / Math.pow(1 + monthlyInterestRate, years * 12));
 		double totalPayment = monthlyPayment * years * 12;
 		
-		System.out.println("Monthly Payment: " + monthlyPayment );
-		System.out.println("Total Payment: " + totalPayment );
+		System.out.printf("%s%5.2f\n","Monthly Payment: " , monthlyPayment );
+		System.out.printf("%s%7.2f\n","Total Payment: " , totalPayment );
 		System.out.println();
 		
 		System.out.printf("%-12s%-12s%-15s%-8s\n", "Payment#", "Interest", "Principal", "Balance");
 		double balance = amount ;
+		double interest;
+		double principal;
+
 		for(int month = 1 ; month <= 12 * years ; month++ ) {
 			
-			double interest = monthlyInterestRate * balance ;
-			double principal = monthlyPayment - interest ;
+			interest = monthlyInterestRate * balance ;
+			principal = monthlyPayment - interest ;
 			balance = balance - principal ;
 			
 			System.out.printf("%-12d%-12.2f%-15.2f%-8.2f\n", month , interest , principal , balance);

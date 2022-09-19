@@ -16,12 +16,12 @@ public class Exercise05_17 {
 			}
 		
 			for( int t =  i  ; t > 0 ; t--){
-				System.out.printf("%3d", t);
-				System.out.print(" ");
+				System.out.printf("%4d", t);
+				System.out.print("");
 				
 			}
 			for (int k = 2 ; k <= i ; k++ ) {
-				System.out.printf("%3d", k , " ");
+				System.out.printf("%4d", k , " ");
 			}
 			System.out.println();
 		}

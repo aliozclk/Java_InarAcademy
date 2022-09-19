@@ -22,8 +22,8 @@ public class Exercise05_01 {
 				negativeCounter++ ;
 			else if (num > 0)
 				positiveCounter++;
-		
-			total += num;
+
+		total += num;
 		}
 		double average = (total / (double)(positiveCounter + negativeCounter)) ;
 

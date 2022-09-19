@@ -9,16 +9,16 @@ public class Exercise05_45 {
         double sum = 0;
         double sumSquare = 0;
         System.out.println("Enter ten numbers: ");
-        for (int i = 1 ; i <= 10 ; i++ ){
+        for (int i = 0 ; i < 10 ; i++ ){
             double num = input.nextDouble();
             sum += num ;
-            sumSquare = num * num ;
+            sumSquare += (num * num) ;
         }
         double mean = sum / 10;
         System.out.println("The mean is "+ mean );
 
-        double deviation = Math.sqrt((sumSquare - ((sum*sum) / 10 )) / 9 ) ;
-        System.out.println("The standard deviation is " + deviation);
+        double deviation = Math.pow(((sumSquare - ((sum*sum) / 10 )) / 9 ), 0.5) ;
+        System.out.printf("%s%.5f" ," The standard deviation is " , deviation);
 
     }
 }
