@@ -85,8 +85,8 @@ public class Exercise06_34 {
         final int START_DAY_FOR_JAN_1_1800 = 3;
         // Get total number of days from 1/1/1800 to month/1/year
        // int totalNumberOfDays = getTotalNumberOfDays(year, month);
-        int numberOfDaysInCurrentMonth = (int)Exercise06_24.; - getNumberOfDaysTillCurrentMonth(currentYear,currentMonth);
-        int dayOfWeek = ( + (( 26 * month + 26) / 10) + (year % 100) +
+
+        int dayOfWeek = ( START_DAY_FOR_JAN_1_1800+ (( 26 * month + 26) / 10) + (year % 100) +
                 (year % 100)/ 4 + (year / 100)/4 + 5 * (year / 100) )% 7 ;
         // Return the start day for month/1/year
         return dayOfWeek;
