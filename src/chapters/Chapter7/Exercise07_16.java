@@ -1,5 +1,7 @@
 package chapters.Chapter7;
 
+import java.util.Arrays;
+
 public class Exercise07_16 {
     public static void main(String[] args) {
         int key = (int) (Math.random() * Integer.MAX_VALUE);
@@ -9,16 +11,18 @@ public class Exercise07_16 {
         }
 
 
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         int index = linearSearch(randArray,key);
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
         long executionTime = endTime - startTime;
 
         System.out.println("Linear Search time : " + executionTime );
 
-        startTime = System.currentTimeMillis();
+        Arrays.parallelSort(randArray);
+
+        startTime =  System.nanoTime();
         index = binarySearch(randArray,key);
-        endTime = System.currentTimeMillis();
+        endTime =  System.nanoTime();
         executionTime = endTime - startTime;
 
         System.out.println("Binary Search time : " + executionTime);
