@@ -46,6 +46,18 @@ public class Exercise07_21 {
         System.out.println();
         System.out.println("____________________________________");
         int repeat = maxBallInSlot(arr);
+
+        for (int i = 0; i < repeat; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j] != 0 ){
+                    System.out.print("0\t");
+                    arr[j]--;
+                }else {
+                    System.out.print("\t");
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static int maxBallInSlot(int[] array){
