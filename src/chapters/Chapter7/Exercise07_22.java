@@ -6,9 +6,10 @@ public class Exercise07_22 {
         int[] positions = new int[8];
 
         int count = 0 ;
-        int position = (int) (Math.random() * 64);
-        while (count < 8){
 
+        int loopCount = 0 ;
+        while (count < 8){
+            int position = (int) (Math.random() * 64);
             if (isAvailableForQueen(position, board)){
                 positions[count] = position;
                 locateQueen(position,board);
@@ -18,6 +19,14 @@ public class Exercise07_22 {
             if(position == 63){
                 position = 0 ;
             }
+            loopCount++;
+            if (loopCount > 100){
+                board = new boolean[64];
+                positions = new int[8];
+                count = 0 ;
+                loopCount = 0 ;
+            }
+
         }
 
         printArray(positions);
@@ -110,6 +119,11 @@ public class Exercise07_22 {
             }
             System.out.println("|");
         }
+    }
+
+    public static void startFromBeginning(boolean[] board , int[] positions){
+        board = new boolean[64];
+        positions = new int[8];
     }
 
 }
