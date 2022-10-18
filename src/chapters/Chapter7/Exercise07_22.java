@@ -15,10 +15,7 @@ public class Exercise07_22 {
                 locateQueen(position,board);
                 count++;
             }
-            position++;
-            if(position == 63){
-                position = 0 ;
-            }
+
             loopCount++;
             if (loopCount > 50){
                 board = new boolean[64];
@@ -121,9 +118,5 @@ public class Exercise07_22 {
         }
     }
 
-    public static void startFromBeginning(boolean[] board , int[] positions){
-        board = new boolean[64];
-        positions = new int[8];
-    }
 
 }
