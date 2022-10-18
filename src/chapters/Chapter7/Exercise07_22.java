@@ -20,7 +20,7 @@ public class Exercise07_22 {
                 position = 0 ;
             }
             loopCount++;
-            if (loopCount > 100){
+            if (loopCount > 50){
                 board = new boolean[64];
                 positions = new int[8];
                 count = 0 ;
@@ -108,9 +108,9 @@ public class Exercise07_22 {
         }
     }
     public static void printArray(int[] array ) {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i <= 56; i += 8) {
             for (int j = 0; j < 8; j++) {
-                System.out.print("|");
+                System.out.print("| ");
                 for (int k = 0; k < array.length; k++) {
                     if (array[k] == (i + j)) {
                         System.out.print("Q");
