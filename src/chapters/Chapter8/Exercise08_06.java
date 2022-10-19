@@ -21,10 +21,15 @@ public class Exercise08_06 {
     }
     public static double[][] multiplyMatrix(double[][] a, double[][] b){
         double[][] total = new double[3][3];
-        for (int row = 0; row < a.length; row++) {
-            for (int col = 0; col < a[row].length; col++) {
-                total[row][col] = a[row][col] + b[row][col];
+
+        for (int totalRow = 0; totalRow < total.length; totalRow++) {
+            for (int row_col = 0; row_col < total[totalRow].length; row_col++) {
+                for (int col = 0; col < total[row_col].length; col++) {
+                    total[totalRow][row_col] +=  a[totalRow][col] * b[col][row_col];
+                }
             }
+
+
         }
         return total;
 
@@ -44,7 +49,7 @@ public class Exercise08_06 {
             }
 
             if (row == 1 ){
-                System.out.print("  +   ");
+                System.out.print("  *   ");
             }else {
                 System.out.print("\t\t");
             }
@@ -58,7 +63,7 @@ public class Exercise08_06 {
                 System.out.print("\t\t");
             }
             for (int col = 0; col < m3[row].length; col++) {
-                System.out.print(m3[row][col]  + " | ");
+                System.out.printf("%2.1f | ",m3[row][col]);
             }
             System.out.println();
         }
