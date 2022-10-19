@@ -2,7 +2,7 @@ package chapters.Chapter8;
 
 import java.util.Scanner;
 
-public class Exercise08_05 {
+public class Exercise08_06 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -15,13 +15,11 @@ public class Exercise08_05 {
         readThem(matrix2,input);
 
         double[][] totalMatrix ;
-        totalMatrix = addMatrix(matrix1,matrix2);
+        totalMatrix = multiplyMatrix(matrix1,matrix2);
         System.out.println("The matrices are added as follows ");
         printArray(matrix1,matrix2,totalMatrix);
-
-
     }
-    public static double[][] addMatrix(double[][] a, double[][] b){
+    public static double[][] multiplyMatrix(double[][] a, double[][] b){
         double[][] total = new double[3][3];
         for (int row = 0; row < a.length; row++) {
             for (int col = 0; col < a[row].length; col++) {
