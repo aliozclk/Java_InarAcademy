@@ -36,23 +36,25 @@ public class Exercise08_33 {
         double[] intersectingPoint = new double[2];
         double x1 = points[0][0];
         double y1 = points[0][1];
-        double x2 = points[1][0];
-        double y2 = points[1][1];
-        double x3 = points[2][0];
-        double y3 = points[2][1];
+        double x2 = points[2][0];
+        double y2 = points[2][1];
+        // Line two is point 2 to point 4
+        double x3 = points[1][0];
+        double y3 = points[1][1];
         double x4 = points[3][0];
         double y4 = points[3][1];
-
-        double mD1 = (y2-y1) / (x2-x1);
-        double mD2 = (y4 - y3) / (x4 - x3);
-
-        if(mD1 == mD2) {
-            intersectingPoint = null ;
-        }else {
-
-            intersectingPoint[0] = ((mD1 * x1) - (mD2 * x3) + y3 - y1) / (mD1 - mD2);
-            intersectingPoint[1] = (mD1 * (intersectingPoint[0] - x1) + y1 + mD2 * (intersectingPoint[0] - x3) + y3) / 2;
-        }
+        /* ------ Cramer's Rule for 2 x 2 Linear Equations ------ */
+        double a = y1 - y2;
+        double b = -(x1 - x2);
+        double c = y3 - y4;
+        double d = -(x3 - x4);
+        double e = (y1 - y2) * x1 - (x1 - x2) * y1;
+        double f = (y3 - y4) * x3 - (x3 - x4) * y3;
+        double D = a * d - b * c;
+        double Dx = e * d - b * f;
+        double Dy = a * f - e * c;
+        intersectingPoint[0] = Dx / D;
+        intersectingPoint[1] = Dy / D;
 
         return intersectingPoint;
     }
@@ -61,7 +63,7 @@ public class Exercise08_33 {
         double x1 = points[triangle][0];
         double y1 = points[triangle][1];
         if(triangle == 3){
-            triangle = 0 ;
+            triangle = -1 ;
         }
         double x2 = points[triangle+1][0];
         double y2 = points[triangle+1][1];
@@ -79,8 +81,8 @@ public class Exercise08_33 {
 
     public static void printArray(double[] chars) {
         for (int row = 0; row < chars.length; row++) {
-                System.out.print(chars[row] + " | ");
-            System.out.println();
+                System.out.printf("%.2f%s" , chars[row] , " | ");
         }
+        System.out.println();
     }
 }
