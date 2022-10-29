@@ -13,11 +13,14 @@ public class Exercise08_35 {
         System.out.println("Enter the matrix row by row: ");
         readThem(matrix, input);
 
-        int[] subMatrix = findLargestBlock(matrix);
+        int[] subMatrixFirstPoint = findLargestBlock(matrix);
+        int length = getSubMatrixLength(matrix, subMatrixFirstPoint);
 
-        System.out.println("The maximum square submatrix is at (" + subMatrix[0] + ", " +
-                subMatrix[1] + ") with size" + subMatrix[2]);
+        System.out.println("The maximum square submatrix is at (" + subMatrixFirstPoint[0] + ", " +
+                subMatrixFirstPoint[1] + ") with size" + length);
     }
+
+
 
     public static void readThem(int[][] numbers, Scanner input) {
         for (int row = 0; row < numbers.length; row++) {
@@ -28,21 +31,35 @@ public class Exercise08_35 {
     }
 
     public static int[] findLargestBlock(int[][] m){
-        int[] subMatrix = new int[3];
+        int[] subMatrixFirstPoint = new int[2];
         for (int row = 0; row < m.length - 1 ; row++) {
-            for (int col = 0; col < m[0].length; col++) {
+            for (int col = 0; col < m[0].length-1; col++) {
                 if(m[row][col] == 0 ){
                     continue;
                 }
                 if(isSubmatrix(m, row, col)){
-
+                    subMatrixFirstPoint[0] = row;
+                    subMatrixFirstPoint[1] = col;
+                    return subMatrixFirstPoint;
                 }
             }
         }
+        return subMatrixFirstPoint;
     }
 
-    private static boolean isSubmatrix(int[][] m, int row, int col) {
+    public static boolean isSubmatrix(int[][] m, int row, int col) {
         return m[row][col + 1] == 1 && m[row + 1][col] == 1 &&
                 m[row + 1][col + 1] == 1;
+    }
+
+    public static int getSubMatrixLength(int[][] matrix, int[] subMatrixFirstPoint) {
+        int length = 1;
+        for (int row = subMatrixFirstPoint[0],col = subMatrixFirstPoint[1] ; row < matrix.length - 1 && col < matrix.length - 1; row++, col++) {
+            if(isSubmatrix(matrix,row,col)){
+                length++;
+            }
+        }
+        return length;
+
     }
 }
