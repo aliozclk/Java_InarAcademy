@@ -82,7 +82,7 @@ public class Exercise08_36 {
     public static boolean controlLettersByRow(char[][] arr , int row , int size){
         for (int col = 0; col < size; col++) {
             if(!(arr[row][col] < 'A' + size )){
-                System.out.println("Wrong input: the letters must be from A to " + (char)('A' + (size - 1 ));
+                System.out.println("Wrong input: the letters must be from A to " + (char)('A' + (size - 1 )));
                 System.exit(1);
             }
         }
