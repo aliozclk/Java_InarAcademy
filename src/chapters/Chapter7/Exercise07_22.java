@@ -2,6 +2,7 @@ package chapters.Chapter7;
 
 public class Exercise07_22 {
     public static void main(String[] args) {
+        long start = System.nanoTime();
         boolean[] board = new boolean[64];
         int[] positions = new int[8];
 
@@ -27,6 +28,9 @@ public class Exercise07_22 {
         }
 
         printArray(positions);
+
+        long end = System.nanoTime();
+        System.out.println("Time : " + (end - start));
 
     }
 
