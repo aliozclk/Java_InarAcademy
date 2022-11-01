@@ -17,6 +17,44 @@ public class Account {
         dateCreated = new Date();
     }
 
+    int getId(){
+        return id;
+    }
 
+    void setId(int id) {
+        this.id = id;
+    }
+
+    void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+
+    double getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+
+    void setAnnualInterestRate(double annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    Date getDateCreated() {
+        return dateCreated;
+    }
+
+    double getMonthlyInterest(){
+        return balance * (getAnnualInterestRate() / 12) ;
+    }
+
+    void withdraw(double amount){
+        balance -= amount ;
+    }
+
+    void deposit(double amount){
+        balance += amount;
+    }
 
 }
