@@ -7,20 +7,16 @@ public class RegularPolygon {
     private double y ;
 
     RegularPolygon(){
-        n = 3 ;
-        side = 1 ;
-        x = 0 ;
-        y = 0;
+        this(3,1);
     }
 
     RegularPolygon(int n , double side){
-        this();
-        this.n = n ;
-        this.side = side;
+        this(n,side,0,0);
     }
 
     RegularPolygon(int n , double side , double x , double y){
-        this(n,side);
+        this.n = n ;
+        this.side = side;
         this.x = x ;
         this.y = y ;
     }
