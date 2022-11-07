@@ -9,32 +9,31 @@ public class Exercise10_5 {
         //prompt and read number
         System.out.println("enter a positive integer");
         int num = input.nextInt();
+        StackOfIntegers reverse = new StackOfIntegers();
+        StackOfIntegers factors = new StackOfIntegers();
 
-        System.out.println("smallest factors in increasing order:");
-        StackOfIntegers factors = findSmallestFactors(num);
+        System.out.println("smallest factors in decreasing order:");
+        findSmallestFactors(num,factors);
+        decreasingOrder(factors, reverse);
         System.out.println();
 
 
         //display them in reverse order
         System.out.println("display them in reverse order:");
-        displayReverseOrder(factors);
+        displayReverseOrder(reverse);
     }
 
-    public static StackOfIntegers findSmallestFactors(int num) {
-        StackOfIntegers factors = new StackOfIntegers();
+    public static void findSmallestFactors(int num, StackOfIntegers factors) {
+
         for (int i = 2; i <= num; i++) {
             if (!isPrime(i)) {
                 continue;
             }
             while (num % i == 0) {
                 num /= i;
-                System.out.print(i + ", ");
                 factors.push(i);
             }
         }
-
-
-        return factors;
     }
 
     public static boolean isPrime(int number) {
@@ -46,11 +45,24 @@ public class Exercise10_5 {
         return true;
     }
 
+    public static void decreasingOrder(StackOfIntegers factors,StackOfIntegers rev){
+        int size = factors.getSize();
+        for (int i = 0; i < size; i++) {
+            reverseOrder(factors.peek(), rev);
+            System.out.print(factors.pop() + ", ");
+
+
+        }
+    }
+
+    public static void reverseOrder(int num,StackOfIntegers reverse){
+        reverse.push(num);
+    }
+
     public static void displayReverseOrder(StackOfIntegers factors){
         int size = factors.getSize();
         for (int i = 0; i < size; i++) {
-            System.out.print(factors.pop() + ",");
-
+            System.out.print(factors.pop() + ", ");
         }
     }
 
