@@ -107,7 +107,8 @@ public class Home {
         return yasHesapla(getYapimYili());
     }
 
-
+    @Deprecated
+    // @see
     public String homeString() {
         return Double.toString(getYuzolcumu()) +"m^2 \n"+ Integer.toString(getBanyoSayisi()) + " adet banyo\n"
                 + Integer.toString(getOdaSayisi()) + " adet oda\n"
