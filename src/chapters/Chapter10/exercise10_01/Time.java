@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_01;
+package chapters.Chapter10.exercise10_01;
 
 import java.util.Date;
 

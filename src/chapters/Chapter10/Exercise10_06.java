@@ -1,7 +1,7 @@
 package chapters.Chapter10;
 
-import chapters.Chapter10.Exercise10_05.Exercise10_5;
-import chapters.Chapter10.Exercise10_05.StackOfIntegers;
+import chapters.Chapter10.exercise10_05.Exercise10_5;
+import chapters.Chapter10.exercise10_05.StackOfIntegers;
 
 public class Exercise10_06 {
     public static void main(String[] args) {

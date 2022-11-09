@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_08;
+package chapters.Chapter10.exercise10_08;
 
 public class Tax {
     private int filingStatus;

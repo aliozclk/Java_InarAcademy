@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_03;
+package chapters.Chapter10.exercise10_03;
 
 public class TestMyInteger {
     public static void main(String[] args) {

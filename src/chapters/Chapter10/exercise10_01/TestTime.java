@@ -1,6 +1,4 @@
-package chapters.Chapter10.Exercise10_01;
-
-import java.util.Date;
+package chapters.Chapter10.exercise10_01;
 
 public class TestTime {
     public static void main(String[] args) {

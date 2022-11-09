@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_04;
+package chapters.Chapter10.exercise10_04;
 
 public class MyPoint {
     private double x ;

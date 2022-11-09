@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_02;
+package chapters.Chapter10.exercise10_02;
 
 public class BMI {
     private String name;

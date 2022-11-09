@@ -1,4 +1,4 @@
-package chapters.Chapter10.Exercise10_05;
+package chapters.Chapter10.exercise10_05;
 
 import java.util.Arrays;
 
@@ -23,7 +23,7 @@ public class StackOfIntegers {
     }
 
     public void push(int value){
-        if(size == elements.length){
+        if(size >= elements.length){
             int[] temp = Arrays.copyOf(elements,elements.length * 2 );
             elements = temp;
         }
