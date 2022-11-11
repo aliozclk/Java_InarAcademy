@@ -2,10 +2,10 @@ package chapters.chapter10;
 
 import java.math.BigDecimal;
 
-public class Exercise10_6 {
+public class Exercise10_16 {
     public static void main(String[] args) {
         String value = "1";
-        for (int i = 0; i < 50; i++) {
+        for (int i = 1; i < 50; i++) {
             value += "0";
         }
         BigDecimal bigDecimal = new BigDecimal(value);
