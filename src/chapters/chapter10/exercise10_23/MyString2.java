@@ -7,20 +7,28 @@ public class MyString2 {
     char[] chars;
 
     public MyString2(String s) {
-        char[] chars = s.toCharArray();
+        char[] ch = new char[s.length()];
+        ch = s.toCharArray();
+        this.chars = ch;
+
     }
 
     public int compare(String s) {
-        int l1 = chars.length;
-        int l2 = s.length();
-        int min = Math.min(l2, l1);
+        int charsTotal = 0;
+        int sTotal = 0;
+        if (this.chars.length != s.length()) {
+            int wholeLength = 0;
+            for (int i = 0; i < chars.length && i < s.length(); i++) {
+                wholeLength = i;
+            }
+            return this.chars[wholeLength] - s.charAt(wholeLength);
 
-        for (int i = 0; i < min; i++) {
-            char ch1 = chars[i];
-            char ch2 = s.charAt(i);
-            return ch1 - ch2;
         }
-        return l1 - l2;
+        for (int i = 0; i < s.length(); i++) {
+            charsTotal += chars[i];
+            sTotal += s.charAt(i);
+        }
+        return charsTotal - sTotal;
     }
 
     public MyString2 substring(int begin) {
