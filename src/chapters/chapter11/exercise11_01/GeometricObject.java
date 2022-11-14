@@ -1,4 +1,4 @@
-package chapters.chapter11;
+package chapters.chapter11.exercise11_01;
 
 public class GeometricObject {
     private String color = "white";

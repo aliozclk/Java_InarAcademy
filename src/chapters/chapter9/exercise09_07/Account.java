@@ -8,53 +8,61 @@ public class Account {
     private double annualInterestRate; //0
     private Date dateCreated;//date when account created
 
-    Account(){
+    public Account(){
         dateCreated = new Date();
     }
-    Account(int id , double balance ){
+    public Account(int id , double balance ){
         this.id = id;
         this.balance = balance;
         dateCreated = new Date();
     }
 
-    int getId(){
+    public int getId(){
         return id;
     }
 
-    void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    void setBalance(double balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
-    double getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    double getAnnualInterestRate() {
+    public double getAnnualInterestRate() {
         return annualInterestRate;
     }
 
-    void setAnnualInterestRate(double annualInterestRate) {
+    public void setAnnualInterestRate(double annualInterestRate) {
         this.annualInterestRate = annualInterestRate;
     }
 
-    Date getDateCreated() {
+    public Date getDateCreated() {
         return dateCreated;
     }
 
-    double getMonthlyInterest(){
+    public double getMonthlyInterest(){
         return balance * (getAnnualInterestRate() / 12) ;
     }
 
-    void withdraw(double amount){
+    public void withdraw(double amount){
         balance -= amount ;
     }
 
-    void deposit(double amount){
+    public void deposit(double amount){
         balance += amount;
     }
 
+    @Override
+    public String toString() {
+        return ".......Account......\n" +
+                "id=" + id + "\n" +
+                "balance=" + balance + "\n" +
+                "annualInterestRate=" + annualInterestRate + "\n" +
+                "dateCreated=" + dateCreated ;
+    }
 }

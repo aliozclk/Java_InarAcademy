@@ -40,4 +40,12 @@ public class MyDate {
         month = ac.get(GregorianCalendar.MONTH);
         day = ac.get(GregorianCalendar.DAY_OF_MONTH);
     }
+
+    @Override
+    public String toString() {
+        return "Created Date : " +
+                "year=" + year +
+                ", month=" + month +
+                ", day=" + day ;
+    }
 }
