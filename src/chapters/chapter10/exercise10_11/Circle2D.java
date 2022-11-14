@@ -5,11 +5,11 @@ public class Circle2D {
     private double y;
     private double radius;
 
-    Circle2D(){
+    public Circle2D(){
         this(0,0,1);
     }
 
-    Circle2D(double x , double y , double radius){
+    public Circle2D(double x , double y , double radius){
         this.x = x;
         this.y = y;
         this.radius = radius;
