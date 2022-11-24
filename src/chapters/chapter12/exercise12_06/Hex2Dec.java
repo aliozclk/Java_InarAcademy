@@ -16,7 +16,7 @@ public class Hex2Dec {
                 + hex + " is " + hexToDecimal(hex.toUpperCase()));
     }
 
-    public static int hexToDecimal(String hex) {
+    public static int hexToDecimal(String hex) throws NumberFormatException {
         if(!hexControl(hex)){
             throw new NumberFormatException(hex + " is not right format" );
         }
