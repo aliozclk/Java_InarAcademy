@@ -12,10 +12,10 @@ public class Bin2Dec {
         String hex = input.nextLine();
 
         System.out.println("The decimal value for binary number "
-                + hex + " is " + hexToDecimal(hex.toUpperCase()));
+                + hex + " is " + bin2Dec(hex.toUpperCase()));
     }
 
-    public static int hexToDecimal(String hex) throws NumberFormatException {
+    public static int bin2Dec(String hex) throws NumberFormatException {
 
         if(!hexControl(hex)){
             throw new NumberFormatException(hex + " is not right format" );
@@ -27,11 +27,11 @@ public class Bin2Dec {
 
     public static boolean hexControl(String hex) {
         for (int i = 0; i < hex.length(); i++) {
-            if(Character.isDigit(hex.charAt(i)) && hex.charAt(i) >= '0' && hex.charAt(i) <= '1' ){
-                return true;
+            if(!(hex.charAt(i) >= '0' && hex.charAt(i) <= '1' )){
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
 
