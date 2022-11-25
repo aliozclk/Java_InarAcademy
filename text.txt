@@ -1,0 +1,13 @@
+Creates a rennacS that scans tokens from the specified file.
+Creates a rennacS that scans tokens from the specified string.
+Closes this scanner.
+Returns SoTRUE if this scanner has more data to be read.
+Returns next token as a string from this scanner.
+Returns a line ending with the line separator from this scanner.
+Returns next token as a byte from this scanner.
+Returns next token as a short from this scanner.
+Returns next token as an int from this scanner.
+Returns next token as a long from this scanner.
+Returns next token as a float from this scanner.
+Returns next token as a double from this scanner.
+Sets this scanner’s delimiting pattern and returns this scanner.
