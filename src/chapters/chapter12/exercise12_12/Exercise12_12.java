@@ -1,52 +1,47 @@
 package chapters.chapter12.exercise12_12;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Exercise12_12 {
     public static void main(String[] args) throws  FileNotFoundException{
-        if (args.length != 2) {
+        if (args.length != 1) {
             throw new IllegalArgumentException("Illegal Input...");
         }
 
 
-        File file = new File(args[1]);
+        File file = new File(args[0]);
         if (!file.exists()) {
-            throw new FileNotFoundException("File " + args[1] + " does not exist");
+            throw new FileNotFoundException("File " + args[0] + " does not exist");
         }
 
-
-        String str = "";
-        System.out.println(file.canRead());
-        System.out.println(file.canWrite());
+        ArrayList<String> list = new ArrayList<>();
         try(
-                PrintWriter output = new PrintWriter(file);
                 Scanner scan = new Scanner(file);
         ) {
             while (scan.hasNext()) {
-
-
-                str += scan.next();
-                if(str.contains("John")){
-                    output.print(nextLineBraces(str));
-                    System.out.println("delete");
-                }
+                String s1 = scan.nextLine();
+                list.add(s1);
             }
         }
-    }
-
-    public static String nextLineBraces(String str){
-        String nextLineBrace = "";
-        String[] splitted = str.split(" ");
-
-        for (int i = 0; i < splitted.length-1; i++) {
-            if(splitted[i+1].equals("{")){
-                splitted[i] += "\n";
-            }else {
-                nextLineBrace += splitted[i];
+        PrintWriter pw = new PrintWriter(file);
+        for (int i = 1; i < list.size(); i++) {
+            String str = list.get(i);
+            if(str.contains("{")){
+                str = str.replace('{',' ');
+                String temp = list.get(i-1);
+                temp = temp + " {";
+                list.set(i, str);
+                list.set(i-1 , temp);
             }
         }
-        return nextLineBrace;
+
+        for (int i = 0; i < list.size(); i++) {
+            pw.println(list.get(i));
+        }
+        pw.close();
+        System.out.println(file.getAbsolutePath());
     }
 }
 
