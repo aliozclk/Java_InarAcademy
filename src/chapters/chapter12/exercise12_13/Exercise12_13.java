@@ -23,10 +23,15 @@ public class Exercise12_13 {
         ){
             while (scan.hasNextLine()){
                 numOfLines++;
-                if(scan.hasNext()){
-                    numOfWords++;
+                String s = scan.nextLine();
+                numOfChars += s.length();
+                for (int i = 0; i < s.length(); i++) {
+                    if (s.charAt(i) == ' '){
+                        numOfWords++;
+                    }
+
                 }
-                numOfChars += scan.next().length();
+                numOfWords++;
             }
         }
 
