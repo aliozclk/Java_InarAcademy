@@ -23,10 +23,10 @@ public class Exercise12_11 {
             PrintWriter output = new PrintWriter(file);
             Scanner scan = new Scanner(file);
         ) {
-            while (scan.hasNextLine()) {
+            while (scan.hasNext()) {
 
 
-                str += scan.nextLine();
+                str += scan.next();
                 if(str.contains("John")){
                     output.print(removedString(str,args[0]));
                     System.out.println("delete");
