@@ -1,6 +1,7 @@
 package chapters.chapter12.exercise12_11;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Exercise12_11 {
@@ -15,37 +16,25 @@ public class Exercise12_11 {
             throw new FileNotFoundException("File " + args[1] + " does not exist");
         }
 
+        ArrayList<String> list = new ArrayList<>();
 
-        String str = "";
-        System.out.println(file.canRead());
-        System.out.println(file.canWrite());
+
         try(
-            PrintWriter output = new PrintWriter(file);
+
             Scanner scan = new Scanner(file);
         ) {
             while (scan.hasNext()) {
-
-
-                str += scan.next();
-                if(str.contains("John")){
-                    output.print(removedString(str,args[0]));
-                    System.out.println("delete");
-                }
+                String s1 = scan.nextLine();
+                list.add(s1.replaceAll(args[0],""));
             }
         }
-    }
 
-    public static String removedString(String str,String removerStr){
-        String removed = "";
-        String[] splitted = str.split(" ");
-
-        for (int i = 0; i < splitted.length; i++) {
-            if(splitted[i].equals(removerStr)){
-                splitted[i] = "";
-            }else {
-                removed += splitted[i];
-            }
+        PrintWriter output = new PrintWriter(file);
+        for (int i = 0; i < list.size(); i++) {
+            output.println(list.get(i));
         }
-        return removed;
+        output.close();
     }
+
+
 }
