@@ -17,14 +17,14 @@ public class Exercise12_20 {
             throw new Exception(s + " is not a directory");
         }
 
-        listFile(dir);
+        searchDirectories(dir);
 
     }
 
-    public static void listFile(File file) throws FileNotFoundException{
+    public static void searchDirectories(File file) throws FileNotFoundException{
         if(file.isDirectory()){
             for (File f : file.listFiles()){
-                listFile(f);
+                searchDirectories(f);
                 if(!f.isDirectory()){
                     firstLineRemover(f);
                 }
