@@ -48,7 +48,7 @@ public class Exercise12_20 {
 
 
                 for (int i = 1; i < list.size(); i++) {
-                    pw.print(list.get(i));
+                    pw.println(list.get(i));
             }
 
                 pw.close();
