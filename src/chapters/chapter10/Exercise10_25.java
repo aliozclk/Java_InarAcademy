@@ -32,4 +32,3 @@ public class Exercise10_25 {
         return arr;
     }
 }
-

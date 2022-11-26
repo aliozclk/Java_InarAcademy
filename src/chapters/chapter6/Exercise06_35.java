@@ -20,4 +20,3 @@ public class Exercise06_35 {
         return area;
     }
 }
-

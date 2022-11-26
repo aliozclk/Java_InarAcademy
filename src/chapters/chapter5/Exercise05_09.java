@@ -41,5 +41,3 @@ public class Exercise05_09 {
 		System.out.println("The second highest score is " + secondScore + " and the student is " +secondStudent);
 	}
 }
-
-

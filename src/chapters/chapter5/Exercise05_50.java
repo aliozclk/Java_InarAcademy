@@ -19,4 +19,3 @@ public class Exercise05_50 {
         System.out.println("The number of uppercase letters is " + upperCase );
     }
 }
-

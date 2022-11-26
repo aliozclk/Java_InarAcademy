@@ -53,7 +53,3 @@ public class Exercise06_32 {
         System.out.println("You lose.");
     }
 }
-
-
-
-

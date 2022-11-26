@@ -42,4 +42,3 @@ public class Exercise2_22 {
 	    System.out.println("    " + numberOfPennies + " pennies");
 	}
 }
-
