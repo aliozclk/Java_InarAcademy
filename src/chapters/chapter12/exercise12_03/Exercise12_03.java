@@ -1,4 +1,4 @@
-package chapters.chapter12;
+package chapters.chapter12.exercise12_03;
 
 import java.util.InputMismatchException;
 import java.util.Random;
