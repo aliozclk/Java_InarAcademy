@@ -1,4 +1,4 @@
-package chapters.chapter2.Exercises;
+package chapters.chapter2.exercises;
 
 import java.util.Scanner;
 

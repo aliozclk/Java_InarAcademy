@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Exercise12_27 {
     public static void main(String[] args) throws IOException {
-        File dir = new File("C:\\Users\\alioz\\Desktop\\workspace\\InarAcademy\\Java_InarAcademy\\src");
+        File dir = new File("C:\\Users\\alioz\\Desktop\\workspace\\InarAcademy\\Java_InarAcademy\\src\\chapters\\chapter10");
 
         searchDirectories(dir);
 
@@ -38,7 +38,7 @@ public class Exercise12_27 {
                         if(Integer.parseInt(splittedDigits[0]) < 10 && !splittedDigits[0].contains("0")){
                             splittedDigits[0] = "0" + splittedDigits[0];
                         }
-                        if(Integer.parseInt(splittedDigits[1]) < 0 && !splittedDigits[1].contains("0")){
+                        if(Integer.parseInt(splittedDigits[1]) < 10 && !splittedDigits[1].contains("0")){
                             splittedDigits[1] = "0" + splittedDigits[1];
                         }
                         splittedLine[j] = "Exercise"+ splittedDigits[0] + "_" + splittedDigits[1];

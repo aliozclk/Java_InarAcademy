@@ -1,6 +1,6 @@
 package chapters.chapter10;
 
-import chapters.chapter10.exercise10_05.Exercise10_5;
+import chapters.chapter10.exercise10_05.Exercise10_05;
 import chapters.chapter10.exercise10_05.StackOfIntegers;
 
 public class Exercise10_06 {
@@ -9,7 +9,7 @@ public class Exercise10_06 {
         StackOfIntegers increasingOrder = new StackOfIntegers();
 
         for (int i = 2; i < 120 ; i++) {
-            if(Exercise10_5.isPrime(i)){
+            if(Exercise10_05.isPrime(i)){
                 decreasingOrder.push(i);
             }
         }
