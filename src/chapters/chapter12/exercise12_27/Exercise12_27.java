@@ -32,7 +32,7 @@ public class Exercise12_27 {
                 String[] splittedLine = list.get(i).split(" ");
                 String temp = "";
                 for (int j = 0; j < splittedLine.length; j++) {
-                    if(splittedLine[j].contains("Exercise")){
+                    if(splittedLine[j].contains("Exercise") && list.get(i).length() < 28){
                         String digits = splittedLine[j].substring(8);
                         String[] splittedDigits = digits.split("_");
                         if(Integer.parseInt(splittedDigits[0]) < 10 && !splittedDigits[0].contains("0")){
