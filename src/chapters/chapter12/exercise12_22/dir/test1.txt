@@ -1,4 +1,4 @@
-oldString old oldString
+newString old newString 
 dsgdfsgs
 dshgh
-oldString fdghsdfgf oldString
+newString fdghsdfgf newString 
