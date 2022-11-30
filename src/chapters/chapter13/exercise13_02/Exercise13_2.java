@@ -1,4 +1,4 @@
-package chapters.chapter13.exercise13_2;
+package chapters.chapter13.exercise13_02;
 
 import java.util.ArrayList;
 
