@@ -1,5 +1,7 @@
 package chapters.chapter13.exercise13_05;
 
+import chapters.chapter13.exercise13_09.GeometricObject;
+
 public class Test13_05 {
     public static void main(String[] args) {
         GeometricObject circle1 = new Circle(5);

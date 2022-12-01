@@ -1,4 +1,4 @@
-package chapters.chapter13.exercise13_05;
+package chapters.chapter13.exercise13_10;
 
 public abstract class GeometricObject implements Comparable<GeometricObject> {
     private String color = "white";

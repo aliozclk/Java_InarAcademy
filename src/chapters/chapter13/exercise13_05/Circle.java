@@ -1,5 +1,7 @@
 package chapters.chapter13.exercise13_05;
 
+import chapters.chapter13.exercise13_09.GeometricObject;
+
 public class Circle extends GeometricObject {
   private double radius;
 

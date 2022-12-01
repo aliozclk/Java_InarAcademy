@@ -1,7 +1,5 @@
 package chapters.chapter13.exercise13_06;
 
-import chapters.chapter13.exercise13_05.GeometricObject;
-
 public class ComparableCircle extends Circle implements Comparable<ComparableCircle> {
 
     ComparableCircle(double radius) {
