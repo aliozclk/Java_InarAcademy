@@ -31,24 +31,22 @@ public class Complex {
         this.b = b;
     }
 
-    public void add(Complex complex){
-        this.a += complex.getA();
-        this.b += complex.getB();
+    public Complex add(Complex complex){
+        return new Complex(complex.getA() + this.a, complex.getB() + this.b);
     }
 
-    public void subtract(Complex complex){
-        this.a -= complex.getA();
-        this.b -= complex.getB();
+    public Complex subtract(Complex complex){
+        return new Complex(this.a - complex.getA(), this.b - complex.getB());
     }
 
-    public void multiply(Complex complex){
-        a = (a * complex.getA() - b * complex.getB());
-        b = b * complex.getA() + a * complex.getB();
+    public Complex multiply(Complex complex){
+        return new Complex(a * complex.a - b * complex.b,
+                b * complex.a + a * complex.b);
     }
 
-    public void divide(Complex complex){
-        a = (a * complex.getA() + b * complex.getB())/ (complex.getA()*complex.getA() + complex.getB()*complex.getB());
-        b = (b * complex.getA() - a * complex.getB())/ (complex.getA()*complex.getA() + complex.getB()*complex.getB());
+    public Complex divide(Complex complex){
+        return new Complex((a * complex.getA() + b * complex.getB())/ (complex.getA()*complex.getA() + complex.getB()*complex.getB()),
+                (b * complex.getA() - a * complex.getB())/ (complex.getA()*complex.getA() + complex.getB()*complex.getB())  );
     }
 
     public double abs(){
@@ -61,7 +59,7 @@ public class Complex {
             return ""+ a;
         }
         else {
-            return "" + a + " + " + b + "i";
+            return "( " + a + " + " + b + "i )";
         }
     }
 
