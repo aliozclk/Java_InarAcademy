@@ -1,4 +1,4 @@
-package chapters.chapter13.exercise13_15;
+package chapters.chapter13.exercise13_18;
 
 import java.math.BigInteger;
 
@@ -25,7 +25,7 @@ public class Rational extends Number implements Comparable<Rational> {
     BigInteger n2 = d;
     BigInteger gcd = BigInteger.ONE;
     
-    for (BigInteger k = BigInteger.ONE; k.compareTo(n1) <= 0 && k.compareTo(n2) <= 0; k.add(BigInteger.ONE)) {
+    for (BigInteger k = BigInteger.ONE; k.compareTo(n1) <= 0 && k.compareTo(n2) <= 0;k = k.add(BigInteger.ONE)) {
       if (n1.remainder( k).compareTo(BigInteger.ZERO) == 0 && n2.remainder(k).compareTo(BigInteger.ZERO) == 0)
         gcd = k;
     }
