@@ -16,8 +16,7 @@ public class Exercise03_01 {
 		if( discriminant < 0) {
 			System.out.println("The equation has no real roots.");
 		} else if ( discriminant == 0) {
-			double r1 = (-b + Math.pow(discriminant,0.5)) /(2 * a );
-			System.out.println("The equation has one root"+ r1 ) ;
+			System.out.println("The equation has one root"+ (-b + Math.pow(discriminant,0.5)) /(2 * a ) ) ;
 			
 		}else {
 			double r1 = (-b + Math.pow(discriminant,0.5)) /(2 * a );
