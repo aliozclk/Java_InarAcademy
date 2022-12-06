@@ -21,7 +21,7 @@ public class Exercise07_06 {
         }
         int count = 0;
         for (int prime: primeNumbers  ) {
-            System.out.print(prime + ", ");
+            System.out.printf("%4d," ,prime);
             count++;
             if(count == 10){
                 System.out.println();
