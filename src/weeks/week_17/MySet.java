@@ -10,7 +10,7 @@ public class MySet {
 
         //1- Set can only store objects
         //2- Set can only store unique values
-        //3- Set does not
+        //3- Set stores values randomly
         set.add(24);
         set.add(53);
         set.add(24);
