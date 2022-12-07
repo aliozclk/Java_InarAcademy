@@ -24,7 +24,6 @@ public class Exercise07_03 {
 
         printOccurences(map);
 
-
     }
 
 
